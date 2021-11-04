@@ -6,6 +6,12 @@
     width: 15rem;
     height: 15rem;
     flex-wrap: wrap;
+    margin: auto;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
 }
 
 .cell {

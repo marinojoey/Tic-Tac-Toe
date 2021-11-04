@@ -1,4 +1,6 @@
 const cells = document.querySelectorAll('.cell')
+const resetEl = document.querySelector('.reset')
+
 
 const gameBoard = (() => {
     'use strict';
@@ -16,12 +18,12 @@ const gameBoard = (() => {
     return {cellsArr}
 })();
 
-let cellsArr = gameBoard.cellsArr
+let board = gameBoard.cellsArr
 
-function handleClick() {
-    console.log('clicked')
-}
 cells.forEach( cells => {
-    cells.addEventListener('click', handleClick)
+    cells.addEventListener('click', function() {
+        cells.style.backgroundColor = 'red'
+    }, {once: true})
 })
+
 
