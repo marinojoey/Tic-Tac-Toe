@@ -33,13 +33,14 @@ const gameBoard = (() => {
                 startGame()
         })
     })
-
     cells.forEach( cells => {
         cells.addEventListener('click', function() {
             if (cells.textContent == '') {
                 cells.textContent = move
                 cells.classList.add(move)
                 swapMoves()
+                winGame()
+                console.log(cell2)
             }
         })
     })
@@ -55,7 +56,7 @@ let cell5 = cellsArr.item(5)
 let cell6 = cellsArr.item(6)
 let cell7 = cellsArr.item(7)
 let cell8 = cellsArr.item(8)
-console.log(cell0.classList)
+
 
 const winCombos = [
     [cell0, cell1, cell2],
@@ -67,4 +68,25 @@ const winCombos = [
     [cell0, cell4, cell8],
     [cell2, cell4, cell6],
 ]
-// console.log(winCombos[0])
+
+let winGame = function() {
+    if (((winCombos[0][0].textContent == 'X') && (winCombos[0][1].textContent == 'X') && (winCombos[0][2].textContent == 'X')) ||
+    ((winCombos[1][0].textContent == 'X') && (winCombos[1][1].textContent == 'X') && (winCombos[1][2].textContent == 'X')) ||
+    ((winCombos[2][0].textContent == 'X') && (winCombos[2][1].textContent == 'X') && (winCombos[2][2].textContent == 'X')) ||
+    ((winCombos[3][0].textContent == 'X') && (winCombos[3][1].textContent == 'X') && (winCombos[3][2].textContent == 'X')) ||
+    ((winCombos[4][0].textContent == 'X') && (winCombos[4][1].textContent == 'X') && (winCombos[4][2].textContent == 'X')) ||
+    ((winCombos[5][0].textContent == 'X') && (winCombos[5][1].textContent == 'X') && (winCombos[5][2].textContent == 'X')) ||
+    ((winCombos[6][0].textContent == 'X') && (winCombos[6][1].textContent == 'X') && (winCombos[6][2].textContent == 'X')) ||
+    ((winCombos[7][0].textContent == 'X') && (winCombos[7][1].textContent == 'X') && (winCombos[7][2].textContent == 'X'))) {
+        console.log("X wins")
+    } else if (((winCombos[0][0].textContent == 'O') && (winCombos[0][1].textContent == 'O') && (winCombos[0][2].textContent == 'O')) ||
+    ((winCombos[1][0].textContent == 'O') && (winCombos[1][1].textContent == 'O') && (winCombos[1][2].textContent == 'O')) ||
+    ((winCombos[2][0].textContent == 'O') && (winCombos[2][1].textContent == 'O') && (winCombos[2][2].textContent == 'O')) ||
+    ((winCombos[3][0].textContent == 'O') && (winCombos[3][1].textContent == 'O') && (winCombos[3][2].textContent == 'O')) ||
+    ((winCombos[4][0].textContent == 'O') && (winCombos[4][1].textContent == 'O') && (winCombos[4][2].textContent == 'O')) ||
+    ((winCombos[5][0].textContent == 'O') && (winCombos[5][1].textContent == 'O') && (winCombos[5][2].textContent == 'O')) ||
+    ((winCombos[6][0].textContent == 'O') && (winCombos[6][1].textContent == 'O') && (winCombos[6][2].textContent == 'O')) ||
+    ((winCombos[7][0].textContent == 'O') && (winCombos[7][1].textContent == 'O') && (winCombos[7][2].textContent == 'O'))) {
+        console.log("O wins")
+    } 
+}

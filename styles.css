@@ -54,3 +54,13 @@
     border-right: none;
     border-bottom: none;
 }
+.X {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.O {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
