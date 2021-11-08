@@ -1,5 +1,11 @@
 * {
     box-sizing: border-box;
+    background-color: rgb(136, 136, 136);
+}
+.title {
+    display: flex;
+    justify-content: center;
+    color:rgb(85, 0, 0);
 }
 .board {
     display: flex;
@@ -7,11 +13,20 @@
     height: 15rem;
     flex-wrap: wrap;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .reset {
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+    height: 3rem;
+}
+
+.resetBtn {
+    border-radius: 5px;
+    box-shadow: 2px;
 }
 
 .cell {
@@ -19,10 +34,10 @@
     align-items: center;
     width: 33.3333%;
     height: 33.3333%;
-    border: 1px solid rgb(177, 15, 15);
+    border: 1px solid rgb(85, 0, 0);
 }
 .cell:hover {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(117, 117, 117);
     cursor: pointer;
 }
 
